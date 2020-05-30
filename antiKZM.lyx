@@ -82,12 +82,12 @@ subequations
 \begin_body
 
 \begin_layout Preprint
-version 1.0 by amz
+version 2.0 by amz
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-2019.04.04
+2020.03.07
 \end_layout
 
 \end_inset
@@ -100,19 +100,70 @@ Experimentally verifying anti-Kibble-Zurek behavior in a quantum system
  under noisy control field
 \end_layout
 
-\begin_layout Thanks
-A footnote to the article title
+\begin_layout Author
+Ming-Zhong Ai
+\end_layout
+
+\begin_layout Author
+Ran He
+\end_layout
+
+\begin_layout Author
+Zhong-Hua Qian
+\end_layout
+
+\begin_layout Author
+Jin-Ming Cui
+\end_layout
+
+\begin_layout Author Email
+
+jmcui@ustc.edu.cn
+\end_layout
+
+\begin_layout Author
+Yun-Feng Huang
+\end_layout
+
+\begin_layout Author Email
+
+hyf@ustc.edu.cn
+\end_layout
+
+\begin_layout Author
+Chuan-Feng Li
+\end_layout
+
+\begin_layout Author Email
+
+cfli@ustc.edu.cn
+\end_layout
+
+\begin_layout Author
+Guang-Can Guo
+\end_layout
+
+\begin_layout Affiliation
+CAS Key Laboratory of Quantum Information, University of Science and Technology
+ of China, Hefei, 230026, People's Republic of China.
+\end_layout
+
+\begin_layout Affiliation
+CAS Center For Excellence in Quantum Information and Quantum Physics, University
+ of Science and Technology of China, Hefei, 230026, People's Republic of
+ China.
 \end_layout
 
 \begin_layout Abstract
 Kibble-Zurek mechanism (KZM) is a very significant framework which could
- in principle describe a phase transition in any system with required symmetry
- properties.
+ in principle describe phase transition phenomenon in any system with required
+ symmetry properties.
  Anti-KZ behavior is a special case of KZM when the quench dynamics couple
- to a dissipative thermal bath, which is still a untapped research area.
- In this work, we first experimentally demonstrate anti-KZ behavior under
- noisy control field in three quantum phase transition protocols using a
- single trapped 
+ to a dissipative thermal bath, whereby slower driving results in more topologic
+al defects.
+ In this work, we for the first time experimentally demonstrate anti-KZ
+ behavior under noisy control field in three kinds of quantum phase transition
+ protocols using a single trapped 
 \begin_inset Formula ${\rm ^{171}Yb^{+}}$
 \end_inset
 
@@ -120,9 +171,9 @@ Kibble-Zurek mechanism (KZM) is a very significant framework which could
  The density of defects is studied as a function of the quench time and
  the noise strength.
  We experimentally verify that the optimal quench time to minimize excitations
- scale as a universal power law of the noise strength.
- Our research can be used as a powerful evidence for the KZM and a demonstration
- of anti-KZ behavior and may reveal the limitations of the adiabatic protocols
+ scales as a universal power law of the noise strength.
+ Our research set a stage for quantum simulation of such anti-KZ behavior
+ in two-level systems and reveal the limitations of the adiabatic protocols
  such as quantum annealing.
 \end_layout
 
@@ -136,9 +187,9 @@ literal "false"
 
 \end_inset
 
- provides an elegant theoretical framework for exploring the nonadiabatic
- dynamics across a phase transitions in systems ranging from cosmological
- to interatomic length scales 
+, provides an elegant theoretical framework for exploring the critical dynamics
+ of phase transition.
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "campo2014universality"
@@ -165,7 +216,7 @@ literal "false"
 \begin_inset Formula $\beta=d\nu/(1+z\nu)>0$
 \end_inset
 
- is determined by the dimensionalty of the system 
+ is determined by the dimensionality of the system 
 \begin_inset Formula $d$
 \end_inset
 
@@ -177,7 +228,7 @@ literal "false"
 \begin_inset Formula $z$
 \end_inset
 
- 
+ respectively
 \begin_inset CommandInset citation
 LatexCommand citep
 key "dutta2016anti"
@@ -186,7 +237,18 @@ literal "false"
 \end_inset
 
 .
- While the KZM has many important implications, its experimental verification
+ Notably, in the quantum domain, the KZM provides useful heuristic for the
+ preparation of ground-state phases of matter in quantum simulation as well
+ as for adiabatic quantum computation 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "suzuki2010quench"
+literal "false"
+
+\end_inset
+
+.
+ Although the KZM has many important implications, its experimental verification
  still calls for further studies.
  For classical continuous phase transitions, many systems have verified
  this mechanism, such as cold atomic gases 
@@ -214,20 +276,9 @@ literal "false"
 \end_inset
 
 .
- Meanwhile quantum phase transitions are accomplished by varying a parameter
- in the Hamiltonian in order to tune between different quantum phase.
- Notably, in the quantum domain, the KZM provides useful heuristics for
- the preparation of ground-state phases of matter in quantum simulation
- as well as for adiabatic quantum computation 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "suzuki2010quench"
-literal "false"
-
-\end_inset
-
-.
- However, its experimental verification are still scarce due to the difficulty
+ Meanwhile for quantum phase transitions, which are accomplished by varying
+ a parameter in the Hamiltonian in order to tune between different quantum
+ phases, its experimental verification are still scarce due to the difficulty
  of exactly controlling driven parameters 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -237,7 +288,8 @@ literal "false"
 \end_inset
 
 .
- And it is led only by using of quantum simulators in few platforms 
+ And it had been performed only in few platforms through quantum simulators
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "xu2014quantum,cui2016j,gong2016m"
@@ -250,9 +302,9 @@ literal "false"
 
 \begin_layout Standard
 While the KZM is believed to be broadly applicable, a conflicting observation
- has been reported in the study of ferroelectric phase transition: approaching
- the adiabatic limit, slower quenches generate more topological defects
- 
+ has been reported in the study of ferroelectric phase transition: slower
+ quenches generate more topological defects when approaching the adiabatic
+ limit 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "griffin2012scaling"
@@ -261,11 +313,13 @@ literal "false"
 \end_inset
 
 .
- Opposited to that predicted by the KZM, this counterintuitive phenomenon
+ Opposited to that predicted by standard KZM, this counterintuitive phenomenon
  is termed as anti-Kibble-Zurek (anti-KZ) dynamics.
- The universal properties of quantum quenches across critical points coupling
- to thermal dissipation using transverse field Ising model is theoretically
- studied in 
+ Considerable attention has been devoted to the anti-KZ mechanism in the
+ last decade.
+ The universal properties of quantum quenches of a quantum system coupling
+ to thermal dissipation simulated using transverse field Ising model is
+ theoretically studied in 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "patane2008adiabatic,nalbach2015quantum"
@@ -274,13 +328,14 @@ literal "false"
 \end_inset
 
 , which exhibits anti-KZ behavior.
- Meanwhile, Adolfo et al show a thermally isolated system driven across
- a quantum phase transition by a noisy control field also exhibits anti-KZ
- behavior, whereby slower driving results in higher density of defects.
+ Meanwhile, Adolfo et al.
+ show a thermally isolated system driven across a quantum phase transition
+ under a noisy control field also exhibits anti-KZ behavior, whereby slower
+ driving results in higher density of defects.
  In order to explore whether the anti-KZ behavior can exhibit in other quantum
  spin models with different scaling exponents under noise control fields,
  dynamics of a transverse-field XY chain driven across quantum critical
- points by noisy control fields is studied in 
+ points under noisy control fields is studied in 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "gao2017anti"
@@ -288,21 +343,23 @@ literal "false"
 
 \end_inset
 
-, which propose an experimentally feasible scheme to test the predicted
- anti-KZ behavior.
+.
+ And this work also proposes an experimentally feasible scheme to test the
+ predicted anti-KZ behavior.
  
 \end_layout
 
 \begin_layout Standard
-In this paper, we first experimentally verified anti-KZ mechanism in quantum
- phase transition with three different protocols using a trapped 
+In this paper, we for the first time experimentally verified anti-KZ mechanism
+ in quantum phase transition with three different protocols using the two
+ level system (TLS) with Landau-Zener (LZ) crossings in a trapped 
 \begin_inset Formula ${\rm ^{171}Yb^{+}}$
 \end_inset
 
  ion.
  These protocols are quenching through the boundary line between paramagnetic
  and ferromagnetic phase, quenching across the isolated multicritical (MC)
- point and along the gapless line, respectively 
+ point and quenching along the gapless line, respectively 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "mukherjee2007v,divakaran2009defect,divakaran2008u"
@@ -314,7 +371,7 @@ literal "false"
  Utilizing built-in Gaussian noise of the microwave signal source, we experiment
 ally investigate the density of topological defects as a function of the
  quench time and the strength of Gaussian noise.
- The result are agree well with the theoretical expectation in 
+ The results are agree well with the theoretical expectation in 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "gao2017anti"
@@ -322,7 +379,7 @@ literal "false"
 
 \end_inset
 
- which the optimal quench time to minimize defects scales as a universal
+, which the optimal quench time to minimize defects scales as a universal
  power law of the noise strength in all three protocols.
  
 \end_layout
@@ -331,7 +388,7 @@ literal "false"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -402,7 +459,7 @@ name "fig:Fig-1"
 \begin_inset Float figure
 wide true
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -467,7 +524,7 @@ The Hamiltonian of a spin-1/2 quantum XY chain under a uniform transverse
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-H=-\frac{1}{2}\sum_{n=1}^{N}(J_{x}\sigma_{n}^{x}\sigma_{n+1}^{x}+J_{y}\sigma_{n}^{y}\sigma_{n+1}^{y}+h\sigma_{n}^{z}),
+H_{1}=-\frac{1}{2}\sum_{n=1}^{N}(J_{x}\sigma_{n}^{x}\sigma_{n+1}^{x}+J_{y}\sigma_{n}^{y}\sigma_{n+1}^{y}+h\sigma_{n}^{z}),
 \end{equation}
 
 \end_inset
@@ -477,7 +534,7 @@ in which we consider only the nearest neighbor interaction.
 \begin_inset Formula $N$
 \end_inset
 
- counts the number of spin, 
+ counts the number of spins, 
 \begin_inset Formula $h$
 \end_inset
 
@@ -506,7 +563,11 @@ in which we consider only the nearest neighbor interaction.
 \begin_inset Formula $i=x,y,z$
 \end_inset
 
-).
+) for the 
+\begin_inset Formula $n$
+\end_inset
+
+th spin.
  For the purpose of convenience, we set 
 \begin_inset Formula $J=J_{x}+J_{y}$
 \end_inset
@@ -521,7 +582,7 @@ in which we consider only the nearest neighbor interaction.
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\begin{aligned}H= & -\frac{J}{2}\sum_{n=1}^{N}[(1+\gamma)\sigma_{n}^{x}\sigma_{n+1}^{x}+(1+\gamma)\sigma_{n}^{y}\sigma_{n+1}^{y}]\\
+\begin{aligned}H_{2}= & -\frac{J}{2}\sum_{n=1}^{N}[(1+\gamma)\sigma_{n}^{x}\sigma_{n+1}^{x}+(1+\gamma)\sigma_{n}^{y}\sigma_{n+1}^{y}]\\
  & -h\sum_{n=1}^{N}\sigma_{n}^{z}.
 \end{aligned}
 \end{equation}
@@ -537,14 +598,14 @@ literal "false"
 
 \end_inset
 
-, we can transform previous transverse field XY chain Hamiltonian to the
+, previous transverse field XY chain Hamiltonian can be transformed to the
  fermionic form: 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\begin{aligned}H= & -J\sum_{l=1}^{N}[(c_{l}^{\dagger}c_{l+1}+c_{l+1}^{\dagger}c_{l})+\gamma(c_{l}^{\dagger}c_{l+1}^{\dagger}+c_{l+1}c_{l})]\\
+\begin{aligned}H_{3}= & -J\sum_{l=1}^{N}[(c_{l}^{\dagger}c_{l+1}+c_{l+1}^{\dagger}c_{l})+\gamma(c_{l}^{\dagger}c_{l+1}^{\dagger}+c_{l+1}c_{l})]\\
  & -h\sum_{l=1}^{N}(2c_{l}^{\dagger}c_{l}-1),
 \end{aligned}
 \end{equation}
@@ -568,15 +629,19 @@ in which
 \begin_inset Formula $\sigma_{N+1}^{\alpha}=\sigma_{1}^{\alpha}$
 \end_inset
 
- and after the Fourier transformation with 
+ and the Fourier transformation with 
 \begin_inset Formula $c_{n}=\frac{e^{-i\pi/4}}{\sqrt{N}}\sum_{k\in(-\pi,\pi]}(e^{ikn}c_{k})$
 \end_inset
 
-, the Hamiltonian can be decoupled into a sum of independent term 
-\begin_inset Formula $H=\sum_{k\in[0,\pi]}H_{m}(k)$
+, this Hamiltonian can be decoupled into a sum of independent term 
+\begin_inset Formula $H_{3}=\sum_{k\in[0,\pi]}H_{m}(k)$
 \end_inset
 
-, where the Hamiltonian density in pseodumomentum space can be written as:
+, where the Hamiltonian density 
+\begin_inset Formula $H_{m}(k)$
+\end_inset
+
+ in pseodumomentum space can be written as:
 \end_layout
 
 \begin_layout Standard
@@ -597,15 +662,13 @@ The evolution of the generic state
 
 .
  This reduces the quantum many-body transverse field XY chain Hamiltonian
- to an array of decoupled single spin-1/2 Hamiltonians.
- More importantly, the method used here sheds the light on experimentally
- simulating many-body model utilizing a Two-Level System (TLS), such as
- trapped ion qubit.
+ to an array of decoupled single spin-1/2 Hamiltonians, which could be simulated
+ utilizing a two level system with well-designed Landau-Zener crossings
+ experimentlly, such as trapped ion qubit.
 \end_layout
 
 \begin_layout Standard
-Now we focus on the three different quench protocols.
- For the convenience of experimentally demonstration, variation of one parameter
+For the convenience of experimentally demonstration, variation of one parameter
  in Hamiltonian 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -617,7 +680,18 @@ noprefix "false"
 \end_inset
 
  is considered.
- As shown in Fig.
+ The phase diagram of the transverse-field XY chain, which is spanned by
+ parameters 
+\begin_inset Formula $h/J$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+, is divided into four parts: the quantum paramagnetic phase PM and two
+ ferromagnetic long-ranged phases ordering along x and y directions denoted
+ by FMx and FMy respectively as shown in Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -628,18 +702,7 @@ noprefix "false"
 
 \end_inset
 
-, the phase diagram of the transverse-field XY chain, which spanned by parameter
-s 
-\begin_inset Formula $h/J$
-\end_inset
-
- and 
-\begin_inset Formula $\gamma$
-\end_inset
-
-, is divided into four parts: the quantum paramagnetic phase PM and two
- ferromagnetic long-ranged phases ordering along x and y directions denoted
- by FMx and FMy, respectively.
+.
  The definition of the density of defects in this transverse field XY chain
  after quench is denoted by:
 \end_layout
@@ -660,7 +723,17 @@ where
 \begin_inset Formula $k$
 \end_inset
 
--modes used in the summation, and 
+-modes used in the summation of Hamiltonian 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:pse_H"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and 
 \begin_inset Formula $p_{k}$
 \end_inset
 
@@ -708,7 +781,7 @@ noprefix "false"
 \begin_inset Float figure
 wide true
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -761,24 +834,24 @@ ic quench across the multicritical point and quench along the gapless line.
 \end_layout
 
 \begin_layout Standard
-In order to observe anti-KZ phenomenon, we consider the three quench protocols
- in transverse-field XY chain under noisy control fields.
- The noise fluctuation 
+In order to observe anti-KZ phenomenon, driving with noisy control fields
+ in the simulation is considered.
+ White Gaussian noise is a good approximation to ubiquitous colored noise
+ with exponentially decaying correlations, therefore the noise term 
 \begin_inset Formula $\eta(t)$
 \end_inset
 
- is set white Gaussian noise with zero mean and the second moment 
+ is set as white Gaussian noise with zero mean and second moment 
 \begin_inset Formula $\overline{\eta(t)\eta(t')}=W^{2}\delta(t-t')$
 \end_inset
 
- because white noise is a good approximation to ubiquitous colored noise
- with exponentially decaying correlations.
+.
  Here 
 \begin_inset Formula $W^{2}$
 \end_inset
 
- is the strength of noise fluctuation.
- We add this noise fluctuation to quench parameter in the form 
+ represents the strength of the noise fluctuation.
+ We add this noise term to quench parameter in the form 
 \begin_inset Formula $f(t)=f^{(0)}(t)+\eta(t)$
 \end_inset
 
@@ -799,18 +872,20 @@ Our experiments are performed using a trapped
 \begin_inset Formula ${\rm ^{171}Yb^{+}}$
 \end_inset
 
- ion in needle trap with the setup similar to the one described in Ref.
+ ion in needle trap with the setup simplified shown in Fig.
  
-\begin_inset CommandInset citation
-LatexCommand citep
-key "cui2016j"
-literal "false"
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Fig-1"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
-.
- Two hyper fine levels of 
-\begin_inset Formula ${\rm ^{171}Yb^{+}}$
+(c).
+ Two hyperfine levels of 
+\begin_inset Formula $^{171}{\rm Yb}^{+}$
 \end_inset
 
  ion in the 
@@ -825,7 +900,7 @@ literal "false"
 \begin_inset Formula $\left|^{2}S_{1/2},F=1,m_{F}=0\right\rangle $
 \end_inset
 
-, are denoted to 
+, are encoded to 
 \begin_inset Formula $\left|0\right\rangle $
 \end_inset
 
@@ -833,67 +908,17 @@ literal "false"
 \begin_inset Formula $\left|1\right\rangle $
 \end_inset
 
-.
- The detuning 
-\begin_inset Formula $\omega$
-\end_inset
-
- between these two levels is about 12.64 GHz.
- We utilize a series of well-designed microwave to drive this ion qubit.
- Then the Hamiltonian of qubit in the frame rotating at the frequency of
- microwave 
-\begin_inset Formula $\omega_{mw}$
-\end_inset
-
- after rotating-wave approximation 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "leek2007observation"
-literal "false"
-
-\end_inset
-
- can be written as:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-H=\frac{1}{2}(\Delta\sigma_{z}+\Omega\sigma_{x}),
-\end{equation}
-
-\end_inset
-
-where 
-\begin_inset Formula $\Delta$
-\end_inset
-
- denotes the detuning between the frequency of microwave 
-\begin_inset Formula $\omega_{mw}$
-\end_inset
-
- and 
-\begin_inset Formula $\omega$
-\end_inset
-
-, and 
-\begin_inset Formula $\Omega$
-\end_inset
-
- is proportional to power of microwave.
- Via careful adjusting the frequency and power of the microwave, we can
- map the Hamiltonian of this ion qubit to the one in Equ.
+ respectively.
+ The microwave used to drive this ion qubit is generated through mixing
+ twice.
+ A microwave signal around 200 MHz generated from a two channel Arbitrary
+ Waveform Generator (AWG) is mixed with a 3.0 GHz microwave generated from
+ a RF signal generator (SG384, Stanford Research Systems).
+ This mixed signal is mixed again with a 9.64 GHz microwave generated from
+ a Analog Signal Generator (E8257D, Agilent) to obtain an arbitrary microwave
+ near 12.64 GHz, and then this signal is amplified to about 2 W and irradiated
+ to the trapped ion by a horn antenna.
  
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:pse_H"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
@@ -913,18 +938,18 @@ noprefix "false"
 
 \end_inset
 
-.
+(b).
  To simulate the quench dynamics under noise fluctuation, white Gaussian
  noise 
 \begin_inset Formula $\eta(t)$
 \end_inset
 
- is added to quench parameter 
+ is added to the time-dependent quench parameter 
 \begin_inset Formula $h(t)$
 \end_inset
 
  as described above.
- Then the Hamiltonian of Equ.
+ The Hamiltonian of Equ.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -949,39 +974,29 @@ noprefix "false"
 
 \end_inset
 
-The microwave used to drive ion qubit is generated through twice mixing.
- That is to say, a two channel Arbitrary Waveform Generator (AWG) creates
- signals around 200 MHz which is mixed with a 3.0 GHz microwave from a RF
- signal generator (SG384, Stanford Research Systems).
- This mixed signal is mixed again with a 9.64 GHz microwave from a Analog
- Signal Generator (E8257D, Agilent) to get an arbitrary microwave near 12.64
- GHz, and then the signal is amplified to about 2 W and irradiated to the
- trapped ion by a horn antenna.
- The white Gaussian noise in this quench protocol is generated through frequency
- modulation (FM) of the microwave generated by SG384 utilizing built-in
- noise source (the detailed form of this noise is described in Supplemental
- Material).
- Different noise strength are realized through varying frequency deviation
+This Hamiltonian can be transformed into standard LZ model 
+\begin_inset Formula $H_{LZ}(k,t)=-\frac{1}{2}(\sigma_{x}+\nu_{LZ}t_{LZ}\sigma_{z})$
+\end_inset
+
+ using the substitutions 
+\begin_inset Formula $\nu_{LZ}=\nu_{h}/(2J\gamma{\rm sin}k)^{2},t_{LZ}=4J\gamma{\rm sin}k(t+J{\rm cos}k/\nu_{h})$
+\end_inset
+
+, in which 
+\begin_inset Formula $h(t)=\nu_{h}t$
+\end_inset
+
+ and 
+\begin_inset Formula $\nu_{h}$
+\end_inset
+
+ is the quench velocity.
+ The standard LZ model could be simulated through a trapped ion qubit as
+ described in Ref.
  
-\begin_inset Formula $F$
-\end_inset
-
- in FM.
-\end_layout
-
-\begin_layout Standard
-The state of the qubit is initialized to 
-\begin_inset Formula $\left|0\right\rangle $
-\end_inset
-
- by 20 
-\begin_inset Formula $\mu s$
-\end_inset
-
- optical pumping after 1 ms Doppler cooling 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "olmschenk2007s"
+key "cui2016j"
 literal "false"
 
 \end_inset
@@ -1009,13 +1024,13 @@ literal "false"
 \begin_inset Formula $J_{y}=-1/3$
 \end_inset
 
-.
+ in the evolution.
  Finally the state is driven again to the basis 
 \begin_inset Formula $\{\left|0\right\rangle ,\left|1\right\rangle \}$
 \end_inset
 
 , which is the reverse process of the first driven, to measure the population
- 
+ probability 
 \begin_inset Formula $p_{k}$
 \end_inset
 
@@ -1024,6 +1039,16 @@ literal "false"
 \end_inset
 
  by fluorescence detection scheme.
+ The white Gaussian noise in this quench protocol is generated through frequency
+ modulation (FM) of the microwave generated by SG384 utilizing built-in
+ noise source (the detailed form of this noise is described in Supplemental
+ Material).
+ Different noise strength are realized through varying frequency deviation
+ 
+\begin_inset Formula $F$
+\end_inset
+
+ in FM.
  We decompose the Hamiltonian 
 \begin_inset Formula $H(t)$
 \end_inset
@@ -1032,7 +1057,7 @@ literal "false"
 \begin_inset Formula $H_{m}(k,t)$
 \end_inset
 
-, in other words, the parameter 
+ in all three protocols, and the parameter 
 \begin_inset Formula $k$
 \end_inset
 
@@ -1040,12 +1065,16 @@ literal "false"
 \begin_inset Formula $\pi$
 \end_inset
 
- which is implemented in all three protocols.
- The final population as a function of 
+.
+ The final population probability 
+\begin_inset Formula $p_{k}$
+\end_inset
+
+ as a function of 
 \begin_inset Formula $k$
 \end_inset
 
- is shown in Fig.
+ under different noise strength and quench time are shown in Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1056,17 +1085,21 @@ noprefix "false"
 
 \end_inset
 
-(a) with different noise strength.
- And the white Gaussian noise causes bulge near 
-\begin_inset Formula $\pi/2$
+(a).
+ As a result, the white Gaussian noise causes bulge around 
+\begin_inset Formula $k=\pi/2$
 \end_inset
 
-, which is the reason for increase of the density of defects in this quench
+, which is the reason of increase of the density of defects in this quench
  process.
  And the stronger the noise is, the more defects would be generated.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 In order to observe anti-KZ phenomena, we measure the density of defects
  with different quench time 
 \begin_inset Formula $\tau$
@@ -1160,6 +1193,11 @@ literal "false"
  
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 We proceed to consider the second quench protocol, the anisotropic quench
  across the multicritical point, as shown in Fig.
@@ -1173,8 +1211,12 @@ noprefix "false"
 
 \end_inset
 
-.
- The Hamiltonian for each k-mode in this case can be written as:
+(b).
+ The Hamiltonian for each 
+\begin_inset Formula $k$
+\end_inset
+
+-mode in this case can be rewritten as:
 \end_layout
 
 \begin_layout Standard
@@ -1188,12 +1230,17 @@ noprefix "false"
 
 \end_inset
 
-where the quench parameter 
+with time-dependent quench parameter 
 \begin_inset Formula $J_{x}(t)$
 \end_inset
 
- ramps from 0 to 3 with the overall ramp time 
-\begin_inset Formula $\tau$
+ ramping from 0 to 3.
+ The Hamiltonian 
+\begin_inset Formula $H_{m}^{(2)}(k,t)$
+\end_inset
+
+ can be transformed into standard LZ model using the substitutions 
+\begin_inset Formula $\nu_{LZ}=\nu_{x}/[2(J_{y}{\rm sin}2k+h{\rm sin}k)]^{2},t_{LZ}=4(J_{y}{\rm sin}2k+h{\rm sin}k)\times[t+(J_{y}{\rm cos}2k+h{\rm cos}k)/\nu_{x}]$
 \end_inset
 
 .
@@ -1208,7 +1255,41 @@ where the quench parameter
  in all experiments of this protocol and under this condition, the system
  is initially in the PM phase and then driven through the multicritical
  point into the FMx phase.
- Figure 
+ The noise used in this quench protocol is induced through frequency modulation
+ (FM) SG384 and amplitude modulation (AM) E8257D synchronously utilizing
+ built-in Gaussian noise respectively.
+ Different noise strength is realized by changing frequency deviation 
+\begin_inset Formula $F$
+\end_inset
+
+ and modulation depth 
+\begin_inset Formula $A$
+\end_inset
+
+ proportionally.
+ For convention, we represent the noise strength 
+\begin_inset Formula $W$
+\end_inset
+
+ through percentage, which in AM is the modulation depth 
+\begin_inset Formula $W=A$
+\end_inset
+
+ and in FM is the ratio 
+\begin_inset Formula $W=F/60{\rm KHz}$
+\end_inset
+
+.
+ The probabilities 
+\begin_inset Formula $p_{k}$
+\end_inset
+
+ measured in excited state as a function of 
+\begin_inset Formula $k$
+\end_inset
+
+ with different noise strength and quench time are shown in Fig.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Fig2"
@@ -1218,16 +1299,13 @@ noprefix "false"
 
 \end_inset
 
-(b) shows the probability 
-\begin_inset Formula $p_{k}$
-\end_inset
+(b).
+ 
+\begin_inset Note Note
+status collapsed
 
- measured in excited state as a function of 
-\begin_inset Formula $k$
-\end_inset
-
-.
- In the noise-free limit, we find that 
+\begin_layout Plain Layout
+In the noise-free limit, we find that 
 \begin_inset Formula $n_{0}\approx r_{0}\tau+c\tau^{-\beta_{fit}}$
 \end_inset
 
@@ -1239,33 +1317,18 @@ noprefix "false"
 \begin_inset Formula $\beta=1/6$
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 .
- The noise is induced through frequency modulation (FM) SG384 and amplitude
- modulation (AM) E8257D synchronously utilizing built-in Gaussian noise
- respectively.
- Different noise strength is realized by changing frequency deviation 
-\begin_inset Formula $F$
-\end_inset
-
- and modulation depth 
-\begin_inset Formula $A$
-\end_inset
-
-.
- proportionately.
- For convention, we represent the noise strength 
-\begin_inset Formula $W$
-\end_inset
-
- by a percentage which in AM is the modulation depth 
-\begin_inset Formula $W=A$
-\end_inset
-
- and in FM is the ratio 
-\begin_inset Formula $W=F/60{\rm KHz}$
-\end_inset
-
-.
+ .
  The results of the defects density 
 \begin_inset Formula $n_{W}(\tau)$
 \end_inset
@@ -1286,11 +1349,16 @@ noprefix "false"
  
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1371,7 +1439,11 @@ name "fig:Fig4"
 
 \begin_layout Standard
 For the last quench protocol along the gapless line, the Hamiltonian for
- each k-mode is:
+ each 
+\begin_inset Formula $k$
+\end_inset
+
+-mode is:
 \end_layout
 
 \begin_layout Standard
@@ -1384,13 +1456,11 @@ For the last quench protocol along the gapless line, the Hamiltonian for
 
 \end_inset
 
-where the parameter 
+in which the time-dependent parameter 
 \begin_inset Formula $\gamma(t)$
 \end_inset
 
- ramping from -2 to 2 is used as the control field to linearly drive the
- system.
- The other parameters are set as 
+ ramping from -2 to 2 while the other parameters are fixed as 
 \begin_inset Formula $h=1$
 \end_inset
 
@@ -1399,6 +1469,14 @@ where the parameter
 \end_inset
 
 .
+ This Hamiltonian could be transformed into standard LZ model using the
+ substitutions 
+\begin_inset Formula $\nu_{LZ}=\nu_{\gamma}{\rm sin}k/[2({\rm cos}k+1)]^{2},t_{LZ}=-4({\rm cos}k+1)t$
+\end_inset
+
+.
+ The noise is induced through amplitude modulation (AM) the microwave source
+ E8257D utilizing built-in Gaussian noise.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1409,7 +1487,7 @@ noprefix "false"
 
 \end_inset
 
-(c) shows the probability 
+(c) shows the probabilities 
 \begin_inset Formula $p_{k}$
 \end_inset
 
@@ -1417,7 +1495,13 @@ noprefix "false"
 \begin_inset Formula $k$
 \end_inset
 
- and Figure 
+ with different noise strength and quench time.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+and Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Fig3"
@@ -1436,7 +1520,11 @@ noprefix "false"
 \end_inset
 
 .
- For noise-free case, we fit the data using 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+For noise-free case, we fit the data using 
 \begin_inset Formula $n_{0}\approx r_{0}\tau+c\tau^{-\beta_{fit}}$
 \end_inset
 
@@ -1449,6 +1537,10 @@ noprefix "false"
 \end_inset
 
 .
+\end_layout
+
+\end_inset
+
  Increasing the noise strength 
 \begin_inset Formula $W$
 \end_inset
@@ -1457,8 +1549,26 @@ noprefix "false"
 \begin_inset Formula $A$
 \end_inset
 
- inters the anti-KZ regime in which the noise is induced through amplitude
- modulation (AM) the microwave source E8257D.
+ inters the anti-KZ regime in which .
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The defects density could be according to 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:n_w"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
  
 \end_layout
 
@@ -1469,7 +1579,7 @@ The defects density exhibits anti-KZ behavior in all of these three quench
 \begin_inset Formula $\tau_{opt}$
 \end_inset
 
- to minimize defects density.
+ to minimize the defects density.
  As the defects density in the presence of noise 
 \begin_inset Formula $n_{W}\approx r_{W}\tau+c\tau^{-\beta}$
 \end_inset
